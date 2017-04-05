@@ -1,0 +1,50 @@
+.slick-dots {
+	position: absolute;
+	bottom: 13px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-size: 0;
+	padding: 0 10px;
+	box-sizing: border-box;
+	text-align: center;
+
+	li {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 30px;
+		width: 14px;
+		height: 14px;
+		border: 2px solid #e4dacf;
+		border-radius: 50%;
+		box-sizing: border-box;
+		background: transparent;
+		cursor: pointer;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		button {
+			display: none;
+		}
+
+		&:hover {
+			border: 2px solid #ec2e2e;
+		}
+
+		&.slick-active {
+			border: 2px solid #ec2e2e;
+			background: #ec2e2e;
+		}
+	}
+
+	@include max-width($sm) {
+		bottom: 121px;
+		left: 22px;
+		transform: none;
+
+		li {
+			border-color: #c2ac98;
+		}
+	}
+}

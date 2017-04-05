@@ -1,0 +1,107 @@
+.loyalty {
+	min-height: 340px;
+	box-sizing: border-box;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background: $alizarin-crimson;
+
+	.container {
+		position: relative;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+		max-width: 50%;
+		@include font-an-bold();
+		font-size: 50px;
+		line-height: 1.2em;
+		color: #fff;
+	}
+	
+	&__text {
+		margin-bottom: 52px;
+		max-width: 50%;
+		@include font-an-med();
+		font-size: 18px;
+		line-height: 1.2em;
+		color: #fff;
+	}
+
+	&__image {
+		position: absolute;
+		top: 31px;
+		right: 190px;
+		width: 337px;
+		height: 199px;
+		box-sizing: border-box;
+		padding: 18px 25px;
+		border-radius: 24px;
+		background: #fff;
+
+		svg {
+			width: 226px;
+			height: 49px;
+		}
+
+		.logo {
+
+			&__text {
+				fill: #ee2a24;
+			}
+		}
+	}
+
+	&__link {
+		min-width: 258px;
+	}
+
+	@include max-width($md) {
+
+		&__text {
+			max-width: 70%;
+		}
+
+		&__image {
+			right: 50px;
+		}
+	}
+
+	@include max-width($sm) {
+		padding-top: 54px;
+		padding-bottom: 64px;
+
+		&__title {
+			margin-bottom: 26px;
+			max-width: 100%;
+			font-size: 44px;
+		}
+
+		&__text {
+			margin-bottom: 22px;
+			max-width: 100%;
+			font-size: 28px;
+
+			br {
+				display: none;
+			}
+		}
+
+		&__image {
+			margin-bottom: 32px;
+			position: static;
+			width: auto;
+			height: 320px;
+			padding: 28px 21px;
+			border-radius: 31px;
+
+			svg {
+				width: 339px;
+				height: 73px;
+			}
+		}
+
+		&__link {
+
+		}
+	}
+}

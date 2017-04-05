@@ -1,0 +1,25 @@
+mixin features()
+	.features(class=attributes.class)
+		h3.features__title Core Features
+		ul.features__list
+			-
+				var features = [
+					{
+						"title": "End-to-End <br>Platform",
+						"text": "Combine the search & hiring process into a single seamless platform"
+					},
+					{
+						"title": "Search Three Types of <br>Professionals",
+						"text": "Utilize both internal and external sources to place candidates quickly and efficiently"
+					},
+					{
+						"title": "Smart (AI) Candidate <br>Matching",
+						"text": "Locate the perfect match through an online footprint profile builder"
+					}
+				]
+			each val, i in features
+				li.feature.features__item
+					h4.feature__title!= val.title
+					.feature__image
+						img(src='../src/img/svg/feature-#{i+1}.svg')
+					p.feature__text!= val.text

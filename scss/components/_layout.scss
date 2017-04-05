@@ -1,0 +1,26 @@
+.layout {
+
+	&-table {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		max-width: 1280px;
+		height: 100vh;
+		margin: 0 auto;
+
+		&__aside {
+			display: table-cell;
+			vertical-align: top;
+			height: 100%;
+			width: 68px;
+			padding-right: 12px;
+		}
+
+		&__content {
+			display: table-cell;
+			vertical-align: top;
+			height: 100%;
+			padding-right: 20px;
+		}
+	}
+}

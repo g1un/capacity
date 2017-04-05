@@ -1,0 +1,132 @@
+.share {
+	font-size: 0;
+
+	&__link {
+		display: inline-block;
+		vertical-align: top;
+		align-items: center;
+		width: 40px;
+		height: 40px;
+		box-sizing: border-box;
+		border-radius: 50%;
+		border: 2px solid $soft-amber;
+		position: relative;
+		margin-right: 29px;
+		text-align: center;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:before {
+			content: '';
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&:after {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		&._vk {
+
+			&:after {
+				@include sprite($vk);
+			}
+
+			&:hover {
+				background: #597da3;
+				border-color: #597da3;
+
+				&:after {
+					@include sprite($vk-hover);
+				}
+			}
+		}
+
+		&._ok {
+
+			&:after {
+				@include sprite($ok);
+			}
+
+			&:hover {
+				background: #f58220;
+				border-color: #f58220;
+
+				&:after {
+					@include sprite($ok-hover);
+				}
+			}
+		}
+
+		&._mailru {
+
+			&:after {
+				@include sprite($mailru);
+			}
+
+			&:hover {
+				background: #2c8de2;
+				border-color: #2c8de2;
+
+				&:after {
+					@include sprite($mailru-hover);
+				}
+			}
+		}
+	}
+
+	@include max-width($sm) {
+
+		&__link {
+			width: 72px;
+			height: 72px;
+
+			&._vk {
+
+				&:after {
+					@include sprite($vk-sm);
+				}
+
+				&:hover {
+
+					&:after {
+						@include sprite($vk-sm-hover);
+					}
+				}
+			}
+
+			&._ok {
+
+				&:after {
+					@include sprite($ok-sm);
+				}
+
+				&:hover {
+
+					&:after {
+						@include sprite($ok-sm-hover);
+					}
+				}
+			}
+
+			&._mailru {
+
+				&:after {
+					@include sprite($mailru-sm);
+				}
+
+				&:hover {
+
+					&:after {
+						@include sprite($mailru-sm-hover);
+					}
+				}
+			}
+		}
+	}
+}

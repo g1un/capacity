@@ -1,0 +1,37 @@
+.btn {
+	display: inline-block;
+	padding: 0 14px;
+	height: 36px;
+	border: 2px solid #fff;
+	border-radius: 18px;
+	@extend %header-down-text;
+	line-height: 36px;
+	text-align: center;
+	
+	&:hover,
+	&:focus {
+		background: #fff;
+		border-color: #fff;
+		color: $alizarin-crimson;
+		text-decoration: none;
+	}
+
+	&._lg {
+		height: 56px;
+		font-size: 18px;
+		line-height: 56px;
+		border-radius: 28px;
+	}
+
+	@include max-width($sm) {
+
+		&._lg {
+			height: 80px;
+			width: 100%;
+			box-sizing: border-box;
+			font-size: 28px;
+			line-height: 76px;
+			border-radius: 38px;
+		}
+	}
+}

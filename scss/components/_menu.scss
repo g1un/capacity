@@ -1,0 +1,36 @@
+.menu {
+
+	&__list {
+		font-size: 0;
+	}
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 51px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__link {
+		@extend %header-down-text;
+	}
+
+	@include max-width($md) {
+		padding-left: 67px;
+	}
+
+	@include max-width($sm) {
+		padding-left: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		&__link {
+			@include font-an-med();
+			font-size: 28px;
+		}
+	}
+}

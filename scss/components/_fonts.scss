@@ -1,0 +1,59 @@
+@font-face {
+	font-family: brandon_reg;
+	src: url(../fonts/brandon_reg.eot);
+	src: url(../fonts/brandon_reg.eot?#iefix) format('embedded-opentype'),
+	url(../fonts/brandon_reg.woff2) format('woff2'),
+	url(../fonts/brandon_reg.woff) format('woff'),
+	url(../fonts/brandon_reg.ttf)  format('truetype');
+}
+@mixin font-bg-reg() {
+	font-family: brandon_reg, sans-serif;
+}
+
+@font-face {
+	font-family: brandon_bld;
+	src: url(../fonts/brandon_bld.eot);
+	src: url(../fonts/brandon_bld.eot?#iefix) format('embedded-opentype'),
+	url(../fonts/brandon_bld.woff2) format('woff2'),
+	url(../fonts/brandon_bld.woff) format('woff'),
+	url(../fonts/brandon_bld.ttf)  format('truetype');
+}
+@mixin font-bg-bold() {
+	font-family: brandon_bld, sans-serif;
+}
+
+@font-face {
+	font-family: brandon_med;
+	src: url(../fonts/brandon_med.eot);
+	src: url(../fonts/brandon_med.eot?#iefix) format('embedded-opentype'),
+	url(../fonts/brandon_med.woff2) format('woff2'),
+	url(../fonts/brandon_med.woff) format('woff'),
+	url(../fonts/brandon_med.ttf)  format('truetype');
+}
+@mixin font-bg-med() {
+	font-family: brandon_med, sans-serif;
+}
+
+@font-face {
+	font-family: SourceSansPro-Regular;
+	src: url(../fonts/SourceSansPro-Regular.eot);
+	src: url(../fonts/SourceSansPro-Regular.eot?#iefix) format('embedded-opentype'),
+	url(../fonts/SourceSansPro-Regular.woff2) format('woff2'),
+	url(../fonts/SourceSansPro-Regular.woff) format('woff'),
+	url(../fonts/SourceSansPro-Regular.ttf)  format('truetype');
+}
+@mixin font-ssp-reg() {
+	font-family: SourceSansPro-Regular, sans-serif;
+}
+
+@font-face {
+	font-family: SourceSansPro-Semibold;
+	src: url(../fonts/SourceSansPro-Semibold.eot);
+	src: url(../fonts/SourceSansPro-Semibold.eot?#iefix) format('embedded-opentype'),
+	url(../fonts/SourceSansPro-Semibold.woff2) format('woff2'),
+	url(../fonts/SourceSansPro-Semibold.woff) format('woff'),
+	url(../fonts/SourceSansPro-Semibold.ttf)  format('truetype');
+}
+@mixin font-ssp-sb() {
+	font-family: SourceSansPro-Semibold, sans-serif;
+}

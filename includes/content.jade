@@ -1,0 +1,8 @@
+mixin content()
+	.container-fluid(class=attributes.class)
+		.row(style='height: 100%')
+			-var i = 1
+			while i <= 12
+				div(class='col-md-1', style='height: 100%;')
+					div(style='background: #f2f2f2; height: 100%;')
+				-i++

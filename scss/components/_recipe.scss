@@ -1,0 +1,223 @@
+.recipe {
+	display: block;
+	min-height: 440px;
+	padding: 0 22px 60px;
+	box-sizing: border-box;
+	border-radius: 7px;
+	box-shadow: 0 1px 4px 0 rgba(0,0,0,.11);
+	text-decoration: none;
+	position: relative;
+	
+	&:hover {
+		
+		.recipe {
+			
+			&__action {
+				border-color: $alizarin-crimson;
+				background: $alizarin-crimson;
+				color: #fff;
+			}
+
+			&__bg {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	&__image {
+		height: 220px;
+		overflow: hidden;
+		margin: 0 -22px 20px;
+		border-radius: 7px 7px 0 0;
+	}
+
+	&__bg {
+		height: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		transition: transform .25s;
+	}
+
+	&__price {
+		float: right;
+		margin-top: -80px;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		background: $chateau-green;
+		@extend %price-text;
+		font-size: 24px;
+		line-height: 80px;
+		text-align: center;
+		position: relative;
+		z-index: 1;
+	}
+
+	&__type {
+		margin-bottom: 7px;
+		@include font-an-reg();
+		font-size: 16px;
+		line-height: 2em;
+		color: rgba(0,0,0,.4);
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 9px;
+		}
+
+		&._vegetarian {
+
+			&:before {
+				@include sprite($vegetarian);
+			}
+		}
+
+		&._complex {
+
+			&:before {
+				@include sprite($complex);
+			}
+		}
+
+		&._breakfast {
+
+			&:before {
+				@include sprite($breakfast);
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 18px;
+		@include font-an-demi();
+		font-size: 24px;
+		line-height: 1.05em;
+		color: #000;
+	}
+
+	&__time {
+		padding-left: 22px;
+		@include font-an-reg();
+		font-size: 18px;
+		line-height: 1.2em;
+		color: rgba(0,0,0,.4);
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			margin-top: -$time-height / 2;
+			left: 0;
+			@include sprite($time);
+		}
+	}
+	
+	&__action {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-top: 1px solid #f4f5f5;
+		border-radius: 0 0 7px 7px;
+		@include font-an-demi();
+		font-size: 18px;
+		line-height: 60px;
+		color: $alizarin-crimson;
+		text-align: center;
+		transition: all .25s;
+	}
+
+	@include max-width($md) {
+		padding: 0 18px 47px;
+		min-height: 356px;
+
+		&__image {
+			height: 178px;
+			margin: 0 -18px 15px;
+		}
+
+		&__price {
+			width: 65px;
+			height: 65px;
+			margin-top: -63px;
+			font-size: 20px;
+			line-height: 65px;
+		}
+
+		&__type {
+			margin-bottom: 5px;
+			font-size: 14px;
+
+			&:before {
+				margin-right: 2px;
+			}
+		}
+
+		&__title {
+			margin-bottom: 16px;
+			font-size: 20px;
+		}
+
+		&__time {
+			font-size: 16px;
+		}
+
+		&__action {
+			font-size: 16px;
+			line-height: 46px;
+		}
+	}
+
+	@include max-width($sm) {
+		padding: 0 32px 97px;
+		min-height: 672px;
+		border-radius: 15px;
+
+		&__image {
+			margin: 0 -32px 34px;
+			height: 336px;
+			border-radius: 15px 15px 0 0;
+		}
+
+		&__price {
+			margin-top: -130px;
+			width: 128px;
+			height: 128px;
+			font-size: 38px;
+			line-height: 128px;
+		}
+
+		&__type {
+			margin-bottom: 22px;
+			font-size: 22px;
+
+			&:before {
+				margin-right: 6px;
+			}
+		}
+
+		&__title {
+			margin-bottom: 20px;
+			font-size: 32px;
+		}
+
+		&__time {
+			padding-left: 28px;
+			font-size: 24px;
+
+			&:before {
+				margin-top: -$time-sm-height / 2;
+				@include sprite($time-sm);
+			}
+		}
+
+		&__action {
+			font-size: 24px;
+			line-height: 96px;
+		}
+	}
+}

@@ -1,0 +1,43 @@
+.intro {
+	height: 620px;
+	display: flex;
+	align-items: center;
+	background: url(../img/intro-bg.jpg) no-repeat center center;
+	position: relative;
+
+	&__container {
+		max-width: 1028px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		margin-bottom: 45px;
+		@include font-bg-bold();
+		font-size: 58px;
+		line-height: 1.09em;
+		color: #fff;
+	}
+
+	&__more {
+		position: absolute;
+		bottom: 31px;
+		left: 50%;
+		transform: translateX(-50%);
+		@include font-ssp-sb();
+		font-size: 18px;
+		line-height: 1.78;
+		color: #fff;
+		text-transform: uppercase;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			margin-left: -6px;
+			border-top: 7px solid #fff;
+			border-left: 6px solid transparent;
+			border-right: 6px solid transparent;
+		}
+	}
+}

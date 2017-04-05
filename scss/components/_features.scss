@@ -1,0 +1,29 @@
+.features {
+	padding: 34px 0 50px;
+	background: url(../img/features-bg.jpg) no-repeat center center;
+
+	&__title {
+		margin-bottom: 30px;
+		@include font-bg-bold();
+		font-size: 28px;
+		line-height: 1.14;
+		color: $astral;
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__list {
+		font-size: 0;
+		text-align: center;
+	}
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 15px;
+
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+}
