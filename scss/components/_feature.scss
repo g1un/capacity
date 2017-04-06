@@ -16,9 +16,39 @@
 
 	&__image {
 		height: 170px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		//display: flex;
+		//justify-content: center;
+		//align-items: center;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateY(-50%) translateX(-50%);
+		}
+
+		&._1 {
+
+			&:before {
+				@include sprite($feature-1);
+			}
+		}
+
+		&._2 {
+
+			&:before {
+				@include sprite($feature-2);
+			}
+		}
+
+		&._3 {
+
+			&:before {
+				@include sprite($feature-3);
+			}
+		}
 	}
 
 	&__text {

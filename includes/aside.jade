@@ -1,2 +1,63 @@
 mixin aside()
 	.aside(class=attributes.class)
+		header.aside__header
+			button.aside__hamburger
+				img(src='../src/img/svg/icon_hamburger.svg')
+			.aside__logo
+				img(src='../src/img/svg/aside-capacity-logo.svg')
+		.aside-company.aside__info
+			.aside-company__logo
+				img(src='img/demo-client-logo.png', alt='demo-client-logo')
+			.aside-company__info
+				.aside-company__title.txt-subtitle Demo Client, Inc.
+				a(href='#').aside-company__settings
+					img(src='../src/img/svg/icon_settings.svg')
+					span.txt-caption Account Preferences
+		ul.aside__menu
+			-
+				var asideMenu = [
+					{
+						"title": "My Dashboard",
+						"img": "dashboard"
+					},
+					{
+						"title": "Search for Contractors",
+						"img": "search"
+					},
+					{
+						"title": "My Job Requests",
+						"img": "jobrequests",
+						"submenu": ["Add New", "View All <span>(4)</span>", "Candidates <span>(8)</span>"]
+					},
+					{
+						"title": "My Employees",
+						"img": "employees",
+						"submenu": ["View All", "Booking Requests"]
+					},
+					{
+						"title": "Manage Contractors",
+						"img": "manage"
+					},
+					{
+						"title": "Capacity Requests",
+						"img": "capacityrequest"
+					},
+					{
+						"title": "Billing Information",
+						"img": "billing"
+					},
+					{
+						"title": "Sign Out",
+						"img": "signout"
+					}
+				]
+			each val, i in asideMenu
+				li.aside__item
+					a.aside__link(class='#{i == 1 ? "_active" : ""}', href='#')
+						img(src='../src/img/svg/icon_#{val.img}.svg')
+						span.txt-body!= val.title
+					if val.submenu
+						ul.aside__submenu
+							each value in val.submenu
+								li.aside__subitem
+									a(href='#').aside__sublink.txt-body!= value

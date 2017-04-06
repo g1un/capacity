@@ -1,4 +1,93 @@
 .aside {
+	width: 56px;
 	height: 100%;
-	background: $mine-shaft-light;
+	background: $mine-shaft;
+
+	&._opened {
+		width: 212px;
+	}
+	
+	&__header {
+		height: 38px;
+		padding: 0 5px 0 16px;
+		display: flex;
+		align-items: center;
+		background: $astral;
+	}
+	
+	&__hamburger {
+		margin-right: 13px;
+		padding: 0;
+		border: none;
+		outline: none;
+		background: transparent;
+		line-height: 0;
+
+		svg {
+			width: 21.56px;
+			height: 14px;
+
+			path {
+
+				fill: #fff;
+			}
+		}
+	}
+
+	&__logo {
+		line-height: 0;
+
+		svg {
+			width: 144px;
+			height: 18px;
+		}
+	}
+
+	&__link {
+		padding-left: 60px;
+		height: 38px;
+		display: flex;
+		align-items: center;
+		line-height: 0;
+		position: relative;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 16px;
+			transform: translateY(-50%);
+		}
+		
+		span {
+			color: #fff;
+		}
+
+		&._active {
+			background: rgba(255,255,255,.1);
+			position: relative;
+			
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				width: 5px;
+				background: $astral;
+			}
+
+			span {
+				@include font-ssp-bold();
+			}
+		}
+	}
+
+	&__sublink {
+		padding-left: 70px;
+		height: 30px;
+		display: flex;
+		align-items: center;
+		font-size: 11px;
+		color: #fff;
+	}
 }

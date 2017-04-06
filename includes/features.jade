@@ -20,6 +20,6 @@ mixin features()
 			each val, i in features
 				li.feature.features__item
 					h4.feature__title!= val.title
-					.feature__image
-						img(src='../src/img/svg/feature-#{i+1}.svg')
+					.feature__image(class='_#{i+1}')
+						//-img(src='../src/img/svg/feature-#{i+1}.svg')
 					p.feature__text!= val.text

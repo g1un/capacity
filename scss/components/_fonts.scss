@@ -57,3 +57,15 @@
 @mixin font-ssp-sb() {
 	font-family: SourceSansPro-Semibold, sans-serif;
 }
+
+@font-face {
+	font-family: SourceSansPro-Bold;
+	src: url(../fonts/SourceSansPro-Bold.eot);
+	src: url(../fonts/SourceSansPro-Bold.eot?#iefix) format('embedded-opentype'),
+	url(../fonts/SourceSansPro-Bold.woff2) format('woff2'),
+	url(../fonts/SourceSansPro-Bold.woff) format('woff'),
+	url(../fonts/SourceSansPro-Bold.ttf)  format('truetype');
+}
+@mixin font-ssp-bold() {
+	font-family: SourceSansPro-Bold, sans-serif;
+}

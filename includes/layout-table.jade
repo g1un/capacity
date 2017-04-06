@@ -3,6 +3,5 @@ include content
 
 mixin layout-table()
 	.layout-table
-		.layout-table__aside
-			+aside()
+		+aside()._opened.layout-table__aside
 		+content().layout-table__content
