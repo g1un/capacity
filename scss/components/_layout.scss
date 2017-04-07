@@ -1,4 +1,32 @@
 .layout {
+	max-width: 1280px;
+	margin: 0 auto;
+
+	&__aside {
+		position: fixed;
+		top: 0;
+		left: 50%;
+		margin-left: -640px;
+		bottom: 0;
+		overflow: visible;
+
+		@media (max-width: 1280px) {
+			left: 0;
+			margin-left: 0;
+		}
+	}
+
+	&__content {
+		padding-left: 76px;
+		padding-right: 20px;
+	}
+
+	&._nav-opened {
+
+		.layout__content {
+			padding-left: 212px;
+		}
+	}
 
 	&-table {
 		display: table;

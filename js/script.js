@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	(function() {
 
 		//cache Dom
+		var layout = document.querySelector('.js-layout');
 		var aside = document.querySelector('.js-aside');
 		var asideHamburger = document.querySelector('.js-aside-hamburger');
 
@@ -13,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		//toggleAside
 		function toggleAside(e) {
 			e.preventDefault();
+			layout.classList.toggle('_nav-opened');
 			aside.classList.toggle('_opened');
 		}
 	})()

@@ -2,9 +2,9 @@ include aside
 include content
 
 mixin layout-table()
-	.layout-table
-		+aside()._opened.layout-table__aside
-		.layout-table__content
+	.layout.js-layout
+		+aside().layout__aside
+		.layout__content
 			+content()
 
 	script(src='js/script.js')

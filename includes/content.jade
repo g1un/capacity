@@ -1,15 +1,15 @@
 mixin content()
-	.container-fluid(class=attributes.class, style='height: 100%;')
-		.row(style='height: 100%')
+	.container-fluid(class=attributes.class)
+		.row
 			-var i = 1
 			while i <= 12
-				div(class='col-md-1', style='height: 100%;')
-					div(style='background: #f2f2f2; height: 100%;')
+				div(class='col-md-1')
+					div(style='background: #f2f2f2; height: 500px;')
 				-i++
-	.container-fluid(class=attributes.class, style='height: 100%;')
-		.row(style='height: 100%')
+	.container-fluid(class=attributes.class)
+		.row
 			-var i = 1
 			while i <= 12
-				div(class='col-md-1', style='height: 100%;')
-					div(style='background: #f2f2f2; height: 100%;')
+				div(class='col-md-1')
+					div(style='background: #f4f4f4; height: 1000px;')
 				-i++
