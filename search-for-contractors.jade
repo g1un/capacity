@@ -10,8 +10,95 @@ html
 		include includes/search
 		include includes/tabs
 		include includes/filter
+		include includes/list
 
 		+layout('Search for Contractors')
 			+search.layout__search
 			+tabs(["All available", "On capacity", "On the web", "My employees"]).layout__tabs
 			+filter({"results": true}).layout__filter
+			+list([
+				{
+					"img": "edna-christensen",
+					"name": "Edna Christensen",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 96
+				},
+				{
+					"img": "derek-m",
+					"name": "Derek M.",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 95
+				},
+				{
+					"img": "edna-christensen",
+					"name": "Kenneth C.",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 94
+				},
+				{
+					"img": "edna-christensen",
+					"name": "Jim A.",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 91
+				},
+				{
+					"img": "edna-christensen",
+					"name": "Polly Cobb",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 90
+				},
+				{
+					"img": "edna-christensen",
+					"name": "Gary Lawson",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 83
+				},
+				{
+					"img": "edna-christensen",
+					"name": "Aiden J.",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 81
+				},
+				{
+					"img": "edna-christensen",
+					"name": "Emilie O.",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 78
+				},
+				{
+					"img": "edna-christensen",
+					"name": "Alfred L.",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 75
+				},
+				{
+					"img": "edna-christensen",
+					"name": "Agnes D.",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 65
+				},
+				{
+					"img": "edna-christensen",
+					"name": "Eugen R.",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 62
+				},
+				{
+					"img": "edna-christensen",
+					"name": "Maria J.",
+					"position": "Accountant",
+					"location": "New York, NY",
+					"match": 60
+				}
+			])

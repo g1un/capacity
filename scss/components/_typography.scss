@@ -10,8 +10,9 @@
 	&-title-1 {
 		@include font-bg-med();
 		font-size: 18px;
-		line-height: 1.2em;
-		color: $mine-shaft-light;
+		line-height: 21 / 18 * 1em;
+		//color: $mine-shaft-light;
+		color: $mine-shaft;
 	}
 
 	&-title-2,
@@ -25,8 +26,9 @@
 	&-subtitle {
 		@include font-bg-reg();
 		font-size: 14px;
-		line-height: 1.2em;
-		color: $mine-shaft-light;
+		line-height: 17 / 14 * 1em;
+		//color: $mine-shaft-light;
+		color: $mine-shaft;
 	}
 
 	&-body {
@@ -39,7 +41,7 @@
 	&-caption {
 		@include font-ssp-reg();
 		font-size: 11px;
-		line-height: 1.2em;
+		line-height: 13 / 11 * 1em;
 		color: $mine-shaft-light;
 	}
 

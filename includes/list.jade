@@ -1,0 +1,22 @@
+mixin list(list)
+	ul.list.row(class=attributes.class)
+		each val, i in list
+			li.list__item.col-md-4
+				a.list-item.list__link(class='#{(i == 0 || i == 4 || i == 5) ? "_my-employee" : ""}', href='#')
+					.list-item__photo
+						.list-item__image
+							img(src='img/#{val.img}.png', alt='#{val.img}')
+						if i == 0 || i == 4 || i == 5
+							img(src='img/demo-client-logo.png', alt='demo-client-logo').list-item__my-employee
+					h4.list-item__name.txt-title-1!= val.name
+					.list-item__position.txt-subtitle!= val.position
+					.list-item__location.txt-caption
+						img(src='../src/img/svg/icon_location.svg')
+						|#{val.location}
+					-
+						var matchValue = val.match >= 90 ? "high" : (val.match >= 75 ? "medium" : "")
+					.match(class='_#{matchValue}').list-item__match
+						.match__value!= val.match
+						svg.match__image(viewPort="0 0 31 31", version="1.1", xmlns="http://www.w3.org/2000/svg")
+							circle.match__bg(r="28", cx="31", cy="31", fill="transparent", stroke-dasharray="175.93", stroke-dashoffset="0")
+							circle.match__bar(r="28", cx="31", cy="31", fill="transparent", stroke-dasharray="#{175.93 * val.match / 100}", stroke-dashoffset="0", stroke-linecap="round")

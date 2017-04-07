@@ -1,0 +1,61 @@
+.match {
+	position: relative;
+
+	&__value {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		@include font-bg-bold();
+		font-size: 22px;
+		line-height: 62px;
+		color: $pomegranate;
+		text-align: center;
+	}
+
+	&__image {
+		width: 62px;
+		height: 62px;
+		transform: rotate(-90deg);
+	}
+
+	&__bg {
+		stroke-width: 3px;
+		stroke: #eee;
+	}
+
+	&__bar {
+		stroke-width: 3px;
+		stroke: $pomegranate;
+	}
+
+	&._high {
+
+		.match {
+
+			&__value {
+				color: $chateau-green;
+			}
+
+			&__bar {
+				stroke: $chateau-green;
+			}
+		}
+	}
+
+	&._medium {
+
+		.match {
+
+			&__value {
+				color: $bright-sun;
+			}
+
+			&__bar {
+				stroke: $bright-sun;
+			}
+		}
+	}
+}
