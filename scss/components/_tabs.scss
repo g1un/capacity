@@ -1,0 +1,35 @@
+.tabs {
+	font-size: 0;
+
+	&__item {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0 10px;
+		cursor: pointer;
+		@include font-bg-bold();
+		font-size: 15px;
+		line-height: 32/15 * 1em;
+		color: $astral;
+		text-transform: uppercase;
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&._active {
+			position: relative;
+
+			&:before {
+				content: '';
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				height: 2px;
+				background: $astral;
+				border-radius: 1px;
+			}
+		}
+	}
+}

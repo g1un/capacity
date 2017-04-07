@@ -1,10 +1,13 @@
 include aside
 include content
 
-mixin layout-table()
+mixin layout(title)
 	.layout.js-layout
 		+aside().layout__aside
 		.layout__content
-			+content()
+			//-+content()
+			.container-fluid
+				h2.layout__title.txt-header!= title
+				block
 
 	script(src='js/script.js')

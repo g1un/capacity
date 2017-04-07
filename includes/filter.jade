@@ -1,0 +1,13 @@
+mixin filter(options)
+	.filter(class=attributes.class).clearfix
+		if(options.results)
+			.filter__results Displaying 142 results
+		.filter__controls
+			.filter__buttons
+				each val in ["grid", "list"]
+					.filter__button(class='_#{val}')
+						button
+							img(src='../src/img/svg/icon_#{val}.svg')
+			.filter__select
+				span Sort by:
+				.filter__list Best match

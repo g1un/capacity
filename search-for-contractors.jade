@@ -1,0 +1,17 @@
+doctype html
+html
+	head
+		title «SFCD»
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width")
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+	body
+		include includes/layout
+		include includes/search
+		include includes/tabs
+		include includes/filter
+
+		+layout('Search for Contractors')
+			+search.layout__search
+			+tabs(["All available", "On capacity", "On the web", "My employees"]).layout__tabs
+			+filter({"results": true}).layout__filter

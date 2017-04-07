@@ -1,0 +1,110 @@
+.filter {
+
+	&__results {
+		float: left;
+		@include font-bg-reg();
+		font-size: 12px;
+		line-height: 2em;
+		color: $mine-shaft;
+		text-transform: uppercase;
+	}
+
+	&__controls {
+		float: right;
+		font-size: 0;
+	}
+
+	&__buttons {
+		display: inline-flex;
+		vertical-align: middle;
+		align-items: center;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+
+		&:after {
+			content: '';
+			display: block;
+			margin: 0 8px;
+			height: 17px;
+			width: 1px;
+			background: #000;
+		}
+
+		&:last-child {
+
+			&:after {
+				display: none;
+			}
+		}
+
+		button {
+			padding: 0;
+			background: none;
+			border: none;
+			outline: none;
+			line-height: 0;
+		}
+
+		&._grid {
+
+			svg {
+				width: 13px;
+				height: 13px;
+
+				path {
+					fill: $astral;
+				}
+			}
+		}
+
+		&._list {
+
+			svg {
+				width: 15.08px;
+				height: 12px;
+
+				path {
+					fill: $astral;
+					stroke: $astral;
+				}
+			}
+		}
+	}
+
+	&__select {
+		margin-left: 48px;
+		display: inline-block;
+		vertical-align: middle;
+		@include font-bg-bold();
+		font-size: 12px;
+		line-height: 2em;
+		color: $mine-shaft;
+
+		span {
+			text-transform: uppercase;
+		}
+	}
+
+	&__list {
+		display: inline-block;
+		vertical-align: top;
+		padding-right: 16px;
+		cursor: pointer;
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 6px;
+			right: 0;
+			width: 7px;
+			height: 7px;
+			border-right: 1px solid $mine-shaft;
+			border-bottom: 1px solid $mine-shaft;
+			transform: rotate(45deg);
+		}
+	}
+}

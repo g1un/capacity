@@ -17,14 +17,31 @@
 	}
 
 	&__content {
-		padding-left: 76px;
-		padding-right: 20px;
+		padding-top: 25px;
+		padding-left: 68px;
+		padding-right: 12px;
+	}
+
+	&__title {
+		margin-bottom: 14px;
+	}
+
+	&__search {
+		margin-bottom: 19px;
+	}
+
+	&__tabs {
+		margin-bottom: 19px;
+	}
+
+	&__filter {
+		margin-bottom: 8px;
 	}
 
 	&._nav-opened {
 
 		.layout__content {
-			padding-left: 212px;
+			padding-left: 224px;
 		}
 	}
 
