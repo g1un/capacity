@@ -4,4 +4,7 @@ include content
 mixin layout-table()
 	.layout-table
 		+aside()._opened.layout-table__aside
-		+content().layout-table__content
+		.layout-table__content
+			+content()
+
+	script(src='js/script.js')

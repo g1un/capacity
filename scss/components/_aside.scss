@@ -9,19 +9,19 @@
 	
 	&__header {
 		height: 38px;
-		padding: 0 5px 0 16px;
 		display: flex;
 		align-items: center;
 		background: $astral;
 	}
 	
 	&__hamburger {
-		margin-right: 13px;
 		padding: 0;
+		width: 56px;
 		border: none;
 		outline: none;
 		background: transparent;
 		line-height: 0;
+		text-align: center;
 
 		svg {
 			width: 21.56px;
@@ -35,6 +35,7 @@
 	}
 
 	&__logo {
+		display: none;
 		line-height: 0;
 
 		svg {
@@ -43,22 +44,94 @@
 		}
 	}
 
+	&._opened {
+
+		.aside__logo {
+			display: block;
+		}
+	}
+
+	&__user {
+		height: 120px;
+		padding-top: 33px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background: $mine-shaft-light;
+
+		&-logo {
+			width: 27px;
+			height: 27px;
+			margin-bottom: 14px;
+
+			img {
+				max-width: 100%;
+			}
+		}
+
+		&-title {
+			display: none;
+			color: #fff;
+		}
+
+		&-settings {
+			line-height: 0;
+
+			svg {
+				width: 17.15px;
+				height: 18px;
+
+				path {
+					fill: #d4d4d4;
+				}
+			}
+
+			span {
+				display: none;
+				color: #d4d4d4;
+			}
+		}
+	}
+
+	&._opened {
+
+		.aside__user {
+			padding: 0 5px 0 16px;
+			flex-direction: row;
+
+			&-logo {
+				margin: 0 14px 0 0;
+				width: 52px;
+				height: 52px;
+			}
+
+			&-title {
+				display: block;
+			}
+
+			&-settings {
+
+				svg {
+					width: 8.57px;
+					height: 9px;
+				}
+
+				span {
+					display: inline;
+				}
+			}
+		}
+	}
+
 	&__link {
-		padding-left: 60px;
 		height: 38px;
 		display: flex;
 		align-items: center;
 		line-height: 0;
-		position: relative;
-
-		svg {
-			position: absolute;
-			top: 50%;
-			left: 16px;
-			transform: translateY(-50%);
-		}
 		
 		span {
+			display: none;
+			padding-left: 4px;
 			color: #fff;
 		}
 
@@ -77,17 +150,45 @@
 			}
 
 			span {
+				display: none;
 				@include font-ssp-bold();
 			}
 		}
 	}
 
+	&__icon {
+		width: 56px;
+		line-height: 0;
+		text-align: center;
+	}
+
+	&._opened {
+
+		.aside__link {
+
+			span {
+				display: inline;
+			}
+		}
+	}
+
 	&__sublink {
+		display: none;
 		padding-left: 70px;
 		height: 30px;
-		display: flex;
 		align-items: center;
 		font-size: 11px;
 		color: #fff;
+
+		span {
+			margin-left: 5px;
+		}
+	}
+
+	&._opened {
+
+		.aside__sublink {
+			display: flex;
+		}
 	}
 }

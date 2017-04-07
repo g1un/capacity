@@ -5,19 +5,20 @@
 		table-layout: fixed;
 		width: 100%;
 		max-width: 1280px;
-		height: 100vh;
+		//height: 100vh;
 		margin: 0 auto;
 
 		&__aside {
 			display: table-cell;
 			vertical-align: top;
-			height: 100%;
+			//height: 100%;
 		}
 
 		&__content {
 			display: table-cell;
 			vertical-align: top;
-			height: 100%;
+			height: 100vh;
+			//min-height: 100vh;
 			padding-left: 20px;
 			padding-right: 20px;
 		}

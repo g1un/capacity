@@ -1,16 +1,16 @@
 mixin aside()
-	.aside(class=attributes.class)
+	.aside(class=attributes.class).js-aside
 		header.aside__header
-			button.aside__hamburger
+			button.aside__hamburger.js-aside-hamburger
 				img(src='../src/img/svg/icon_hamburger.svg')
 			.aside__logo
 				img(src='../src/img/svg/aside-capacity-logo.svg')
-		.aside-company.aside__info
-			.aside-company__logo
+		.aside__user
+			.aside__user-logo
 				img(src='img/demo-client-logo.png', alt='demo-client-logo')
-			.aside-company__info
-				.aside-company__title.txt-subtitle Demo Client, Inc.
-				a(href='#').aside-company__settings
+			.aside__user-info
+				.aside__user-title.txt-subtitle Demo Client, Inc.
+				a(href='#').aside__user-settings
 					img(src='../src/img/svg/icon_settings.svg')
 					span.txt-caption Account Preferences
 		ul.aside__menu
@@ -54,7 +54,8 @@ mixin aside()
 			each val, i in asideMenu
 				li.aside__item
 					a.aside__link(class='#{i == 1 ? "_active" : ""}', href='#')
-						img(src='../src/img/svg/icon_#{val.img}.svg')
+						.aside__icon
+							img(src='../src/img/svg/icon_#{val.img}.svg')
 						span.txt-body!= val.title
 					if val.submenu
 						ul.aside__submenu
