@@ -1,0 +1,12 @@
+mixin match(match, options1, second, options2)
+	-
+		var matchValue = match >= 90 ? "high" : (match >= 75 ? "medium" : "")
+	.match(class='#{attributes.class} _#{matchValue}')
+		.match__value!= match
+		svg.match__image(viewPort="0 0 #{options1.R} #{options1.R}", version="1.1", xmlns="http://www.w3.org/2000/svg", width="#{2 * options1.R}", height="#{2 * options1.R}")
+			circle.match__bg(r="#{options1.r}", cx="#{options1.R}", cy="#{options1.R}", fill="transparent", stroke-dasharray="#{2 * Math.PI * options1.r}", stroke-dashoffset="0")
+			circle.match__bar(r="#{options1.r}", cx="#{options1.R}", cy="#{options1.R}", fill="transparent", stroke-dasharray="#{2 * Math.PI * options1.r * match / 100}", stroke-dashoffset="0", stroke-linecap="round")
+		if second
+			svg.match__image._lines(viewPort="0 0 #{options2.R} #{options2.R}", version="1.1", xmlns="http://www.w3.org/2000/svg", width="#{2 * options2.R}", height="#{2 * options2.R}")
+				circle.match__bg(r="#{options2.r}", cx="#{options2.R}", cy="#{options2.R}", fill="transparent", stroke-dasharray="#{2 * Math.PI * options2.r}", stroke-dashoffset="0")
+				circle.match__bar(r="#{options2.r}", cx="#{options2.R}", cy="#{options2.R}", fill="transparent", stroke-dasharray="#{2 * Math.PI * options2.r * match / 100}", stroke-dashoffset="0", stroke-linecap="round")

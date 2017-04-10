@@ -1,0 +1,19 @@
+include match
+
+mixin modal()
+	.modal-container
+		.modal-employee
+			header.modal-employee__header
+				.modal-employee__photo
+					img(src='img/edna-christensen.png')
+				.modal-employee__name Kyle P.
+				.modal-employee__role Accountant
+				-
+					var options1 = {
+						"r": 22,
+						"R": 25
+					}
+				+match(91, options1).modal-employee__match
+			section.modal-employee__content
+				.modal-employee__info
+				form(action='#', method='get').modal-employee__form
