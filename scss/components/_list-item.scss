@@ -69,6 +69,10 @@
 	&__location {
 		margin-left: 90px;
 	}
+
+	&__status {
+		display: none;
+	}
 	
 	&__position {
 		margin-bottom: 8px;
@@ -89,9 +93,102 @@
 		}
 	}
 
+	&__experience,
+	&__rate {
+		display: none;
+	}
+
 	&__match {
 		position: absolute;
 		top: 18px;
 		right: 15px;
+	}
+}
+
+._lines {
+
+	.list-item {
+		padding: 6px 8px 6px;
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+
+		&:after {
+			display: none;
+		}
+
+		&__photo {
+			padding-right: 8px;
+			width: 43px;
+			float: none;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		&__image {
+			width: 35px;
+			height: 35px;
+			border: none;
+		}
+
+		&._my-employee {
+
+			.list-item {
+
+				&__my-employee {
+					display: none;
+				}
+			}
+		}
+
+		&__name,
+		&__position,
+		&__location,
+		&__experience,
+		&__rate,
+		&__match {
+			margin: 0;
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		&__status {
+			display: inline-block;
+			vertical-align: baseline;
+			margin-left: 10px;
+			padding: 7px 11px 9px 11px;
+			border-radius: 14px;
+			@include font-ssp-sb();
+			font-size: 12px;
+			line-height: 1em;
+			color: $astral;
+			background: rgba(60,138,158,.2);
+		}
+
+		&__position {
+			width: 123 / 1012 * 100%;
+		}
+
+		&__location {
+			width: 121 / 1012 * 100%;
+		}
+
+		&__experience {
+			width: 118 / 1012 * 100%;
+		}
+
+		&__rate {
+			width: 125 / 1012 * 100%;
+		}
+
+		&__match {
+			width: 105 / 1012 * 100%;
+		}
+
+		&__match {
+			position: relative;
+			top: auto;
+			right: auto;
+		}
 	}
 }

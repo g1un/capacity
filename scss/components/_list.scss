@@ -1,6 +1,69 @@
 .list {
 
+	&__header {
+		display: none;
+	}
+
 	&__item {
 		margin-bottom: 15px;
+	}
+
+	&._lines {
+
+		.list {
+
+			&__header {
+				display: table;
+				table-layout: fixed;
+				width: 100%;
+				padding: 0 8px;
+				margin-bottom: 10px;
+				@include font-bg-bold();
+				font-size: 12px;
+				line-height: 1em;
+				color: $mine-shaft;
+				text-transform: uppercase;
+			}
+
+			&__caption {
+				display: table-cell;
+				vertical-align: middle;
+
+				&._role {
+					width: 123 / 1028 * 100%;
+				}
+
+				&._location {
+					width: 121 / 1028 * 100%;
+				}
+
+				&._experience {
+					width: 118 / 1028 * 100%;
+				}
+
+				&._rate {
+					width: 125 / 1028 * 100%;
+				}
+
+				&._match {
+					width: 113 / 1028 * 100%;
+					padding-right: 8px;
+					cursor: pointer;
+
+					svg {
+						display: inline-block;
+						vertical-align: baseline;
+						margin-left: 5px;
+						margin-bottom: 1px;
+						overflow: visible;
+					}
+				}
+			}
+
+			&__item {
+				@extend .col-md-12;
+				margin-bottom: 10px;
+			}
+		}
 	}
 }

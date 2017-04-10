@@ -1,24 +1,3 @@
-<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>
-        Slice 1
-    </title>
-    <defs>
-        <rect id="a" x="-439" y="-128" width="610" height="241" rx="4"/>
-        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="b">
-            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
-            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
-            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0" in="shadowBlurOuter1"/>
-        </filter>
-    </defs>
-    <g fill="none" fill-rule="evenodd">
-        <mask id="c" fill="#fff">
-            <use xlink:href="#a"/>
-        </mask>
-        <use fill="#000" filter="url(#b)" xlink:href="#a"/>
-        <use fill="#FFF" xlink:href="#a"/>
-        <g mask="url(#c)">
-            <path d="M0 0h24v24H0z"/>
-            <path d="M17.778 10.277l-5.25 5.25a.741.741 0 0 1-1.055 0l-5.25-5.25A.737.737 0 0 1 6 9.751C6 9.339 6.34 9 6.749 9h10.5c.412 0 .751.34.751.75 0 .2-.082.387-.222.527" fill="#282828"/>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-279 417.9 12 6.7" width="8" height="4.5">
+    <path fill="#212121" d="M-267.2 419.2l-5.3 5.3c-.3.3-.8.3-1 0l-5.3-5.3c-.1-.1-.2-.3-.2-.5 0-.4.3-.8.7-.8h10.5c.4 0 .8.3.8.8 0 .1-.1.3-.2.5"/>
 </svg>
