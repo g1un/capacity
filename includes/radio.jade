@@ -1,0 +1,4 @@
+mixin radio(title, id, name)
+	.radio
+		input(type='radio', name='#{name}', id='#{id}')
+		label(for='#{id}')!= title
