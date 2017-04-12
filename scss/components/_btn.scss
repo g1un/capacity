@@ -1,37 +1,31 @@
-.btn {
+.btn-primary {
 	display: inline-block;
-	padding: 0 14px;
-	height: 36px;
-	border: 2px solid #fff;
-	border-radius: 18px;
-	@extend %header-down-text;
-	line-height: 36px;
+	padding: 8px 12px;
+	background: $astral;
+	border-radius: 2px;
+	border: none;
+	outline: none;
+	@include font-bg-bold();
+	font-size: 12px;
+	line-height: 1em;
+	color: #fff;
+	text-transform: uppercase;
 	text-align: center;
-	
-	&:hover,
-	&:focus {
-		background: #fff;
-		border-color: #fff;
-		color: $alizarin-crimson;
-		text-decoration: none;
+
+	&:disabled {
+		background: rgba(40,40,40,.3);
 	}
+}
 
-	&._lg {
-		height: 56px;
-		font-size: 18px;
-		line-height: 56px;
-		border-radius: 28px;
-	}
+.btn-flat {
+	display: inline-block;
+	padding: 0;
+	border: none;
+	outline: none;
+	background: none;
+	@extend .txt-flat-button;
 
-	@include max-width($sm) {
-
-		&._lg {
-			height: 80px;
-			width: 100%;
-			box-sizing: border-box;
-			font-size: 28px;
-			line-height: 76px;
-			border-radius: 38px;
-		}
+	&:disabled {
+		color: rgba(40,40,40,.3);
 	}
 }

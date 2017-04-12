@@ -1,68 +1,79 @@
 include match
 include radio
+include input
 
 mixin modal()
 	.modal-container
-		.modal
-			header.modal__header
-				.modal__photo
-					img(src='img/edna-christensen.png')
-				.modal__person
-					.modal__name.txt-title-1 Kyle P.
-					.modal__role.txt-subtitle Accountant
-				-
-					var options1 = {
-						"r": 23.5,
-						"R": 25
-					}
-				+match(91, options1).modal__match
-			section.modal__content
-				.modal__info
-					.row
-						.col-xs-6
-							h4.txt-title-2 Employer
-							p Law firm, New York, NY, 500-1,000 employees
-						.col-xs-6
-							h4.txt-title-2 Location
-							p New York, NY
-					.row
-						.col-xs-12
-							h4.txt-title-2 Skills
-							p Accounting, P&L, accounts payable, accounts receivable, invoicing, collections, tax preparation, audits
-					.row
-						.col-xs-6
-							h4.txt-title-2 Experience
-							p 6 years
-						.col-xs-6
-							h4.txt-title-2 Capacity Rate
-							p $72/Hour
-					.row
-						.col-xs-12
-							h4.txt-title-2 Capacity Interview
-				form(action='#', method='get').modal__form
-					h4 Select a job request
+		.modal-container__wrapper
+			.modal
+				header.modal__header
+					.modal__photo
+						img(src='img/edna-christensen.png')
+					.modal__person
+						.modal__name.txt-title-1 Kyle P.
+						.modal__role.txt-subtitle Accountant
 					-
-						var radios = [
-							{
-								"title": "Accountant",
-								"id": "accountant"
-							},
-							{
-								"title": "Tax Accountant",
-								"id": "tax-accountant"
-							},
-							{
-								"title": "Auditor",
-								"id": "auditor"
-							},
-							{
-								"title": "Executive Assistant",
-								"id": "executive-assistant"
-							},
-							{
-								"title": "Create new...",
-								"id": "create-new"
-							}
-						]
-					each val in radios
-						+radio(val.title, val.id, "job-request")
+						var options1 = {
+							"r": 23.5,
+							"R": 25
+						}
+					+match(91, options1).modal__match
+				section.modal__content
+					.modal__info
+						.row
+							.col-xs-6
+								h4.txt-title-2 Employer
+								p Law firm, New York, NY, 500-1,000 employees
+							.col-xs-6
+								h4.txt-title-2 Location
+								p New York, NY
+						.row
+							.col-xs-12
+								h4.txt-title-2 Skills
+								p Accounting, P&L, accounts payable, accounts receivable, invoicing, collections, tax preparation, audits
+						.row
+							.col-xs-6
+								h4.txt-title-2 Experience
+								p 6 years
+							.col-xs-6
+								h4.txt-title-2 Capacity Rate
+								p $72/Hour
+						.row
+							.col-xs-12
+								h4.txt-title-2 Capacity Interview
+								video(controls, poster="img/video_preview.jpg").video
+									source(src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4", type="video/mp4")
+									source(src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg")
+									source(src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm")
+									|Your browser doesn't support HTML5 video tag.
+					form(action='#', method='get').modal__form.js-form
+						h4 Select a job request
+						-
+							var radios = [
+								{
+									"title": "Accountant",
+									"id": "accountant"
+								},
+								{
+									"title": "Tax Accountant",
+									"id": "tax-accountant"
+								},
+								{
+									"title": "Auditor",
+									"id": "auditor"
+								},
+								{
+									"title": "Executive Assistant",
+									"id": "executive-assistant"
+								},
+								{
+									"title": "Create new...",
+									"id": "create-new"
+								}
+							]
+						each val in radios
+							+radio(val.title, val.id, "job-request")
+						+input('start day', 'start-day', 'icon_calendar').modal__input
+						.modal__buttons
+							button.modal__cancel.btn-flat Cancel
+							input(type='submit', name='make-inquiry', id='make-inquiry', value='Make Inquiry').modal__submit.btn-primary

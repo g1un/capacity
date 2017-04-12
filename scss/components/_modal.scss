@@ -1,15 +1,15 @@
 .modal {
-	max-width: 610px;
 	margin: 0 auto;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,.15);
 	background: #fff;
 	border-radius: 4px;
+	overflow: hidden;
 
 	&__header {
 		padding: 15px;
 		display: table;
 		table-layout: fixed;
-		width: 100%;
+		min-width: 100%;
 		background: $concrete;
 		box-shadow: inset 0 -1px 0 0 rgba(40,40,40,.2);
 		border-radius: 4px 4px 0 0;
@@ -59,12 +59,17 @@
 		display: table-cell;
 		vertical-align: top;
 		width: 375px;
+		min-width: 375px;
 		padding: 20px;
 		background: #fff;
 		border-radius: 0 0 0 4px;
 
 		.row {
 			margin-bottom: 11px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 
 		h4 {
@@ -84,10 +89,12 @@
 	&__form {
 		display: table-cell;
 		vertical-align: top;
+		min-width: 235px;
 		width: 235px;
-		padding: 20px;
-		background: $concrete;
+		padding: 20px 20px 58px;
+		background: $concrete url('../img/curve.jpg') no-repeat center bottom;
 		border-radius: 0 0 4px 0;
+		position: relative;
 
 		h4 {
 			margin-bottom: 13px;
@@ -101,5 +108,25 @@
 		.radio {
 			margin-bottom: 11px;
 		}
+	}
+
+	&__input {
+		margin-top: 18px;
+	}
+
+	&__buttons {
+		position: absolute;
+		right: 20px;
+		bottom: 20px;
+		font-size: 0;
+	}
+
+	&__cancel {
+		vertical-align: bottom;
+		margin-right: 16px;
+	}
+
+	&__submit {
+		vertical-align: bottom;
 	}
 }

@@ -1,7 +1,7 @@
 //plugins
 @import "plugins/normalize";
 @import "plugins/bootstrap/variables";
-@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "plugins/bootstrap/bootstrap";
 //@import "plugins/slick";
 
 //base
@@ -11,6 +11,9 @@
 @import 'components/general';
 @import 'components/sprite';
 @import 'components/radio';
+@import 'components/input';
+@import 'components/btn';
+@import 'components/video';
 //@import 'components/columns';
 @import 'components/typography';
 @import 'components/match';

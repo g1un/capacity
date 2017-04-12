@@ -1,0 +1,6 @@
+mixin input(title, name, icon)
+    .input.js-input(class=attributes.class)
+        input(type='text', name='#{name}', id='#{name}').input__field
+        label(for='#{name}').input__label.js-input-label!= title
+        if icon
+            img(src='../src/img/svg/#{icon}.svg').input__icon
