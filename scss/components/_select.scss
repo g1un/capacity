@@ -1,0 +1,29 @@
+.select {
+  padding-top: 11px;
+  padding-bottom: 10px;
+
+  &__title {
+    padding-bottom: 2px;
+    padding-right: 10px;
+    border-bottom: 1px solid rgba(40,40,40,.15);
+    cursor: pointer;
+    position: relative;
+
+    span {
+      @include font-bg-med();
+      font-size: 12px;
+      line-height: 2em;
+      color: rgba(40,40,40,.8);
+      text-transform: uppercase;
+    }
+
+    svg {
+      content: '';
+      position: absolute;
+      top: 9px;
+      right: 0;
+      width: 9px;
+      height: 5px;
+    }
+  }
+}

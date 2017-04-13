@@ -2,15 +2,15 @@
   padding: 20px;
   width: 519px;
 
+  &._slim {
+    width: 383px;
+  }
+
   &__title {
     margin-bottom: 10px;
   }
 
   .row {
-    margin-bottom: 10px;
-  }
-
-  .form-control {
     margin-bottom: 10px;
   }
 }

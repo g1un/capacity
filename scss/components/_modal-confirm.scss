@@ -1,0 +1,27 @@
+.modal-confirm {
+  width: 383px;
+  padding: 20px;
+  text-align: center;
+
+  &__image {
+    margin-bottom: 12px;
+  }
+
+  svg {
+    overflow: visible;
+  }
+
+  &__title {
+    margin-bottom: 13px;
+  }
+
+  &__text {
+    margin-bottom: 14px;
+    line-height: 19 / 14 * 1em;
+  }
+
+  &__close {
+    clear: both;
+    float: right;
+  }
+}

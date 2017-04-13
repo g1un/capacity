@@ -1,0 +1,47 @@
+doctype html
+html
+	head
+		title «SFCD»
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width")
+		link(rel='stylesheet', type='text/css', href='css/style.css')
+	body
+		include includes/input
+		include includes/form-control
+		include includes/switch
+		include includes/select
+		include includes/buttons
+
+		.modal-container
+			.modal-container__wrapper
+				form(action='#', method='get').modal.modal-form._slim.js-form
+					h4.modal-form__title.txt-title-1 Create Job Request
+					.row
+						.col-xs-12
+							+input('role')
+					.row
+						.col-xs-12
+							+input('job description', 'job-description')
+					.row
+						.col-xs-12
+							+input('skills needed', 'skills-needed')
+					.row
+						.col-xs-6
+							+select('experience needed', 'experience-needed')
+						.col-xs-6
+							+input('location')
+					.row
+						.col-xs-6
+							+input('duration (weeks)', 'duration-weeks')
+						.col-xs-6
+							+input('hours per week', 'hours-per-week')
+					.row
+						.col-xs-6
+							+form-control('private job request')
+								+switch('No', 'private-job-request')
+						.col-xs-6
+							+form-control('internal job request')
+								+switch('No', 'internal-job-request')
+					+buttons( 'cancel', 'Cancel', 'create-job-request', 'Create Job Request')
+
+		script(src='js/script.js')

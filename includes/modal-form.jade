@@ -7,7 +7,6 @@ mixin modal-form()
 	.modal-container
 		.modal-container__wrapper
 			form(action='#', method='get').modal.modal-form.js-form
-				//h4.modal-form__title Create Job Request
 				.row
 					.col-xs-6
 						+input('role').modal-form__input
@@ -21,14 +20,18 @@ mixin modal-form()
 						+input('availability (weeks)', 'availability-weeks').modal-form__input
 					.col-xs-6
 						+input('availability (hrs/weeks)', 'availability-hrs-weeks').modal-form__input
-				+form-control('experience')
-					each val in ["0-2", "2-5", "5-10", "10+"]
-						-
-							var title = val + " Years";
-						+checkbox(title, val)
-				+form-control('capacity rate')
-					each val in ["&#60;$50", "$50-100", "$100+"]
-						-
-							var title = val + "/Hr.";
-						+checkbox(title, val)
+				.row
+					.col-xs-12
+						+form-control('experience')
+							each val in ["0-2", "2-5", "5-10", "10+"]
+								-
+									var title = val + " Years";
+								+checkbox(title, val)
+				.row
+					.col-xs-12
+						+form-control('capacity rate')
+							each val in ["&#60;$50", "$50-100", "$100+"]
+								-
+									var title = val + "/Hr.";
+								+checkbox(title, val)
 				+buttons('reset-search', 'Reset Search', 'apply', 'Apply', 'reset')
