@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title «SFCD»
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width")
+        link(rel='stylesheet', type='text/css', href='css/style.css')
+    body
+        include includes/layout
+        include includes/link-back
+        include includes/section-header
+
+        +layout()
+            +link-back('all employees')
+            .row
+                section.col-lg-5
+                    +section-header()
