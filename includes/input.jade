@@ -1,4 +1,6 @@
 mixin input(title, name, icon)
+    -
+        if(!name) name = title;
     .input.js-input(class=attributes.class)
         input(type='text', name='#{name}', id='#{name}').input__field
         label(for='#{name}').input__label.js-input-label!= title

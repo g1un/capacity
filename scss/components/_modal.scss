@@ -55,6 +55,14 @@
 		table-layout: fixed;
 	}
 
+	&._slim {
+
+		.modal__content {
+			display: block;
+			width: 375px;
+		}
+	}
+
 	&__info {
 		display: table-cell;
 		vertical-align: top;
@@ -86,6 +94,15 @@
 		}
 	}
 
+	&._slim {
+
+		.modal__info {
+			display: block;
+			width: auto;
+			padding-bottom: 0;
+		}
+	}
+
 	&__form {
 		display: table-cell;
 		vertical-align: top;
@@ -107,6 +124,17 @@
 
 		.radio {
 			margin-bottom: 11px;
+		}
+	}
+
+	&._slim {
+
+		.modal__form {
+			display: block;
+			width: auto;
+			padding-top: 0;
+			padding-bottom: 64px;
+			background: #fff;
 		}
 	}
 

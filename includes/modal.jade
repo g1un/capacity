@@ -1,6 +1,7 @@
 include match
 include radio
 include input
+include buttons
 
 mixin modal()
 	.modal-container
@@ -74,6 +75,4 @@ mixin modal()
 						each val in radios
 							+radio(val.title, val.id, "job-request")
 						+input('start day', 'start-day', 'icon_calendar').modal__input
-						.modal__buttons
-							button.modal__cancel.btn-flat Cancel
-							input(type='submit', name='make-inquiry', id='make-inquiry', value='Make Inquiry').modal__submit.btn-primary
+						+buttons('cancel', 'Cancel', 'make-inquiry', 'Make Inquiry').modal__buttons

@@ -1,0 +1,13 @@
+.buttons {
+  font-size: 0;
+  text-align: right;
+
+  &__cancel {
+    vertical-align: bottom;
+    margin-right: 16px;
+  }
+
+  &__submit {
+    vertical-align: bottom;
+  }
+}
