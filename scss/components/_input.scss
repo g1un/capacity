@@ -1,14 +1,12 @@
 .input {
-  padding-top: 13px;
-  padding-bottom: 10px;
-  //margin-bottom: 12px;
+  padding: 18px 0 5px;
   position: relative;
 
   &._has-value,
   &._focused {
 
     .input__label {
-      transform: translateY(0px) scale(.8333);
+      transform: translateY(5px) scale(.8333);
     }
   }
 
@@ -50,7 +48,7 @@
     top: 0;
     left: 0;
     transform-origin: 0 0;
-    transform: translateY(17px) scale(1);
+    transform: translateY(22px) scale(1);
     transition: all .25s;
     @include font-bg-med();
     font-size: 12px;
@@ -93,17 +91,7 @@
   }
 
   &__textarea {
-    display: block;
-    border: 1px solid #c6c6c6;
-    min-height: 78px;
-    text-align: left;
-
-    &:hover,
-    &:active,
-    &:focus {
-      border: 1px solid #c6c6c6;
-      outline: none;
-    }
+    line-height: 18 / 14 * 1em;
   }
 
   &._icon {

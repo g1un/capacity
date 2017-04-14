@@ -1,7 +1,7 @@
 .switch {
 	display: inline-block;
 	vertical-align: top;
-	padding-bottom: 7px;
+	//padding-bottom: 7px;
 	line-height: 0;
 
 	input {
@@ -29,7 +29,7 @@
 		padding-left: 47px;
 		cursor: pointer;
 		transition: all .25s;
-		line-height: 20 / 14 * 1em;
+		line-height: 24 / 14 * 1em;
 		position: relative;
 
 		&:before {

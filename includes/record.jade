@@ -1,0 +1,10 @@
+mixin record(title, value, icon, tip)
+    .record(class=attributes.class)
+        .record__label
+            span!= title
+            if tip
+                a(href='#').record__tip
+                    img(src='../src/img/svg/icon_tip.svg')
+        .record__field!= value
+        if icon
+            img(src='../src/img/svg/#{icon}.svg').record__icon

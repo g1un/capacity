@@ -19,8 +19,9 @@
 	&-button {
 		@include font-bg-bold();
 		font-size: 12px;
-		line-height: 1.2em;
+		line-height: 18 / 12 *1em;
 		color: $astral;
+		text-transform: uppercase;
 	}
 
 	&-subtitle {
@@ -64,6 +65,6 @@
 		@include font-bg-med();
 		font-size: 10px;
 		line-height: 1em;
-		color: $mine-shaft-light;
+		color: rgba(40,40,40,.5);
 	}
 }

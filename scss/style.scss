@@ -9,12 +9,13 @@
 @import 'components/mixins';
 @import 'components/fonts';
 @import 'components/general';
+@import 'components/block';
 @import 'components/sprite';
 @import 'components/radio';
 @import 'components/input';
+@import 'components/record';
 @import 'components/btn';
 @import 'components/video';
-//@import 'components/columns';
 @import 'components/typography';
 @import 'components/match';
 @import 'components/form-control';
@@ -22,13 +23,10 @@
 @import 'components/switch';
 @import 'components/select';
 @import 'components/buttons';
-//@import 'components/btn';
-//@import 'components/slick-dots';
 
 //custom
 @import 'components/layout';
 @import 'components/aside';
-//@import 'components/aside-company';
 @import 'components/header';
 @import 'components/intro';
 @import 'components/search';
@@ -42,15 +40,4 @@
 @import 'components/modal';
 @import 'components/modal-form';
 @import 'components/modal-confirm';
-//@import 'components/nav';
-//@import 'components/logo';
-//@import 'components/menu';
-//@import 'components/products';
-//@import 'components/share';
-//@import 'components/recipes';
-//@import 'components/recipe';
-//@import 'components/trademarks';
-//@import 'components/shops';
-//@import 'components/loyalty';
 @import 'components/footer';
-//@import 'components/footer-list';

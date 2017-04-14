@@ -1,0 +1,101 @@
+.record {
+  padding: 4px 0 5px;
+
+  &._textarea {
+    padding-bottom: 11px;
+  }
+
+  &._title-2 {
+    padding: 0;
+  }
+
+  &__label {
+    display: block;
+    height: 10px;
+    margin-bottom: 4px;
+    font-size: 0;
+
+    span {
+      display: inline-block;
+      vertical-align: top;
+      @include font-bg-med();
+      font-size: 10px;
+      line-height: 1em;
+      color: rgba(40,40,40,.5);
+      text-transform: uppercase;
+    }
+
+    &._title-2 {
+
+      .record__label {
+        height: auto;
+        margin-bottom: 2px;
+
+        span {
+          @extend .txt-title-2;
+        }
+      }
+    }
+  }
+
+  &__field {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid rgba(40,40,40,.15);
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    background: transparent;
+    @include font-ssp-reg();
+    font-size: 14px;
+    line-height: 24 / 14 * 1em;
+    color: $mine-shaft;
+
+    &._title-2 {
+
+      .record__field {
+        line-height: 18 / 14 * 1em;
+      }
+    }
+  }
+
+  &._textarea {
+
+    .record__field {
+      padding: 2px 0 6px;
+      line-height: 18 / 14 * 1em;
+    }
+  }
+
+  &__tip {
+    margin-left: 6px;
+    display: inline-block;
+    vertical-align: middle;
+
+    svg {
+      width: 11px;
+      height: 11px;
+      overflow: visible;
+    }
+  }
+
+  &._icon {
+    padding-right: 27px;
+  }
+
+  &__icon {
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 3px;
+    max-width: 20px;
+
+    path {
+      fill: rgba(40,40,40,.8);
+      opacity: .8;
+    }
+  }
+}

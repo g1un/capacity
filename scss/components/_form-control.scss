@@ -1,8 +1,11 @@
 .form-control {
+  padding: 4px 0 6px;
   font-size: 0;
 
   &__title {
-    margin-bottom: 15px;
+    //margin-bottom: 15px;
+    margin-bottom: 4px;
+    //color: rgba(40,40,40,.8);
     text-transform: uppercase;
   }
 }

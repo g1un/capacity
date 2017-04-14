@@ -8,10 +8,48 @@ html
     body
         include includes/layout
         include includes/link-back
-        include includes/section-header
+        include includes/record
+        include includes/form-control
+        include includes/switch
+        include includes/input
+        include includes/checkbox
 
         +layout()
             +link-back('all employees')
             .row
                 section.col-lg-5
-                    +section-header()
+                    .block
+                        .block__header
+                        .block__container.js-form
+                            .block__edit
+                                button.btn-flat Edit
+                            .block__row.row
+                                .col-xs-6
+                                    +record('name', 'Kyle Perez')
+                                .col-xs-6
+                                    +record('job title', 'Accountant')
+                            .block__row.row
+                                .col-xs-12
+                                    +record('skills', 'Accounting, P&L, accounts payable, accounts receivable, invoicing, collections, tax prepartion, audits')._textarea
+                            .block__row.row
+                                .col-xs-12
+                                    +record('location', 'New York, NY')
+                            .block__row.row
+                                .col-xs-6
+                                    +record('Experience (Years)', '6')
+                                .col-xs-6
+                                    +record('Hourly Rate', '$60')
+                            .block__row.row
+                                .col-xs-6
+                                    +form-control('Available for Placement')
+                                        +switch('Yes', 'available-for-placement')
+                                .col-xs-6
+                                    +record('Capacity Rate', '$72', false, true)
+                            .block__row.row.m-t-2
+                                .col-xs-12
+                                    h4.txt-title-2 Capacity Interview
+                                    video(controls, poster="img/video_preview.jpg").video
+                                        source(src="https://archive.org/download/WebmVp8Vorbis/webmvp8_512kb.mp4", type="video/mp4")
+                                        source(src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg")
+                                        source(src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm")
+                                        | Your browser doesn't support HTML5 video tag.
