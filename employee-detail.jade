@@ -13,13 +13,20 @@ html
         include includes/switch
         include includes/input
         include includes/checkbox
+        include includes/collapse
+        include includes/buttons
 
         +layout()
             +link-back('all employees')
             .row
                 section.col-lg-5
                     .block
-                        .block__header
+                        .block__header.block-header
+                            .block-header__photo
+                                img(src='img/kyle-p.jpg')
+                            .block-header__info
+                                .block-header__name.txt-title-1 Kyle Perez
+                                button.block-header__button.btn-flat Remove Image
                         .block__container.js-form
                             .block__edit
                                 button.btn-flat Edit
@@ -53,3 +60,56 @@ html
                                         source(src="https://archive.org/download/WebmVp8Vorbis/webmvp8.ogv" type="video/ogg")
                                         source(src="https://archive.org/download/WebmVp8Vorbis/webmvp8.webm" type="video/webm")
                                         | Your browser doesn't support HTML5 video tag.
+                section.col-lg-7
+                    .heading.txt-title-2 Requests to Hire (2)
+                    -
+                        requests = [
+                            {
+                                "company": "BDG Consulting",
+                                "period": "June 1 - July 30, 2017",
+                                "hours": "30",
+                                "payout": "9,750"
+                            },
+                            {
+                                "company": "Grayson Accounting",
+                                "period": "June 15 - August 15",
+                                "hours": "20",
+                                "payout": "6,750"
+                            }
+                        ]
+                    each val, i in requests
+                        .block
+                            .block__container.request
+                                .request__company
+                                    .request__company-title.txt-title-1!= val.company
+                                    .request__location
+                                        img(src='../src/img/svg/icon_location.svg')
+                                        span.txt-caption New York, NY
+                                .request__time
+                                    .request__period.txt-body!= val.period
+                                    span |
+                                    .request__hours.txt-body #{val.hours} hours per week
+                                .request__payout.txt-body Capacity Payout: $#{val.payout}
+                                +collapse('job description')(class='#{i == 1 ? "_opened" : ""} request__desc')
+                                    p.request__desc-text.txt-body Watkins is seeking a detail-oriented accountant with accounts-payable experience to assist during our busy season.
+                                +buttons('decline-request', 'Decline Request', 'accept-request', 'Accept Request')
+                    .heading.txt-title-2 Placement History (2)
+                    -
+                        requests = [
+                            {
+                                "company": "Walker Brothers",
+                                "period": "November 6 - December 14, 2016",
+                                "payout": "7,520"
+                            },
+                            {
+                                "company": "Apotheker & Apotheker",
+                                "period": "July 15 - 29, 2016",
+                                "payout": "2,920"
+                            }
+                        ]
+                    each val, i in requests
+                        .block
+                            .block__container.request
+                                .placement__company.txt-title-1!= val.company
+                                .placement__period.txt-body!= val.period
+                                .placement__payout.txt-body Capacity Payout: $#{val.payout}

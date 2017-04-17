@@ -1,0 +1,58 @@
+.request {
+
+  &__company {
+    margin-bottom: 10px;
+    font-size: 0;
+  }
+
+  &__company-title {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 15px;
+    line-height: 26 / 18 * 1em;
+  }
+
+  &__location {
+    display: inline-block;
+    vertical-align: baseline;
+
+    svg {
+      margin-right: 3px;
+      overflow: visible;
+    }
+
+    span {
+      color: $mine-shaft;
+      line-height: 14 / 11 *1em;
+    }
+  }
+
+  &__period,
+  &__hours,
+  &__payout {
+    line-height: 20 / 14 * 1em;
+    color: $mine-shaft;
+  }
+
+  &__time {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+    span {
+      margin: 0 6px;
+    }
+  }
+
+  &__payout {
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    margin-bottom: 15px;
+  }
+
+  &__desc-text {
+    line-height: 18 / 14 * 1em;
+  }
+}

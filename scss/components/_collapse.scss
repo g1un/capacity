@@ -1,0 +1,38 @@
+.collapse {
+
+  &__btn {
+    cursor: pointer;
+
+    svg {
+      width: 5.75px;
+      height: 10.22px;
+      margin-right: 10px;
+
+      path {
+        fill: $astral
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+    margin-top: 5px;
+  }
+
+  &._opened {
+
+    .collapse {
+
+      &__btn {
+
+        svg {
+          transform: rotate(90deg);
+        }
+      }
+
+      &__content {
+        display: block;
+      }
+    }
+  }
+}

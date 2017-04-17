@@ -1,0 +1,17 @@
+.placement {
+
+  &__company {
+    margin-bottom: 10px;
+    line-height: 26 / 18 * 1em;
+  }
+
+  &__period,
+  &__payout {
+    line-height: 20 / 14 * 1em;
+    color: $mine-shaft;
+  }
+
+  &__period {
+    margin-bottom: 5px;
+  }
+}

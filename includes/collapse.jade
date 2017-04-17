@@ -1,0 +1,7 @@
+mixin collapse(title)
+    .collapse(class=attributes.class)
+        .collapse__btn.txt-button
+            img(src='../src/img/svg/icon_caret-right.svg')
+            span!= title
+        .collapse__content
+            block

@@ -10,6 +10,7 @@
 @import 'components/fonts';
 @import 'components/general';
 @import 'components/block';
+@import 'components/block-header';
 @import 'components/sprite';
 @import 'components/radio';
 @import 'components/input';
@@ -17,12 +18,15 @@
 @import 'components/btn';
 @import 'components/video';
 @import 'components/typography';
+@import 'components/heading';
 @import 'components/match';
 @import 'components/form-control';
 @import 'components/checkbox';
 @import 'components/switch';
 @import 'components/select';
 @import 'components/buttons';
+@import 'components/link-back';
+@import 'components/collapse';
 
 //custom
 @import 'components/layout';
@@ -40,4 +44,6 @@
 @import 'components/modal';
 @import 'components/modal-form';
 @import 'components/modal-confirm';
+@import 'components/request';
+@import 'components/placement';
 @import 'components/footer';

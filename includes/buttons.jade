@@ -1,7 +1,7 @@
-mixin buttons(btn1, title1, btn2, title2, reset)
+mixin buttons(name1, title1, name2, title2, reset)
     .buttons(class=attributes.class)
         if !reset
-            button(name='#{btn1}', id='#{btn1}').buttons__cancel.btn-flat!= title1
+            button(name='#{name1}', id='#{name1}').buttons__cancel.btn-flat!= title1
         else
-            input(type='reset', name='#{btn1}', id='#{btn1}', value='#{title1}').buttons__cancel.btn-flat
-        input(type='submit', name='#{btn2}', id='#{btn2}', value='#{title2}').buttons__submit.btn-primary
+            input(type='reset', name='#{name1}', id='#{name1}', value='#{title1}').buttons__cancel.btn-flat
+        input(type='submit', name='#{name2}', id='#{name2}', value='#{title2}').buttons__submit.btn-primary

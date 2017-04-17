@@ -1,3 +1,5 @@
 mixin link-back(title)
     .link-back
-        a(href='#')!= title
+        a(href='#').txt-title-2
+            img(src='../src/img/svg/icon_back.svg')
+            span!= title

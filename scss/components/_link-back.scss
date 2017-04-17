@@ -1,0 +1,18 @@
+.link-back {
+  height: 50px;
+  padding-left: 3px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  svg {
+    width: 22px;
+    height: 9.31px;
+    margin-right: 10px;
+    overflow: visible;
+
+    path {
+      fill: $astral;
+    }
+  }
+}
