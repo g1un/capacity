@@ -1,0 +1,106 @@
+doctype html
+html
+    head
+        title «SFCD»
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width")
+        link(rel='stylesheet', type='text/css', href='css/style.css')
+    body
+        include includes/layout
+        include includes/link-back
+        include includes/rqst-details
+        include includes/title-btn
+        include includes/search
+        include includes/list
+
+        +layout()
+            +link-back('all capacity requests')
+            +rqst-details()
+            +title-btn('Place an Employee', 'Place unlisted employee')
+            +search("Place an Employee", "place unlisted employee").layout__search
+            +list([
+                {
+                    "img": "edna-christensen",
+                    "name": "Edna Christensen",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 96
+                },
+                {
+                    "img": "derek-m",
+                    "name": "Derek M.",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 95
+                },
+                {
+                    "img": "edna-christensen",
+                    "name": "Kenneth C.",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 94
+                },
+                {
+                    "img": "edna-christensen",
+                    "name": "Jim A.",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 91
+                },
+                {
+                    "img": "edna-christensen",
+                    "name": "Polly Cobb",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 90
+                },
+                {
+                    "img": "edna-christensen",
+                    "name": "Gary Lawson",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 83
+                },
+                {
+                    "img": "edna-christensen",
+                    "name": "Aiden J.",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 81
+                },
+                {
+                    "img": "edna-christensen",
+                    "name": "Emilie O.",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 78
+                },
+                {
+                    "img": "edna-christensen",
+                    "name": "Alfred L.",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 75
+                },
+                {
+                    "img": "edna-christensen",
+                    "name": "Agnes D.",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 65
+                },
+                {
+                    "img": "edna-christensen",
+                    "name": "Eugen R.",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 62
+                },
+                {
+                    "img": "edna-christensen",
+                    "name": "Maria J.",
+                    "position": "Accountant",
+                    "location": "New York, NY",
+                    "match": 60
+                }
+            ])

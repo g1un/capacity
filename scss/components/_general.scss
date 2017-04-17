@@ -26,6 +26,10 @@ a {
 	text-decoration: none;
 }
 
+svg:not(:root) {
+  overflow: visible;
+}
+
 .clearfix::after {
   content: '';
   display: table;

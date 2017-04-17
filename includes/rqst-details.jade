@@ -1,0 +1,17 @@
+include location
+
+mixin rqst-details()
+    .rqst-details
+        header.rqst-details__header.clearfix
+            h3.rqst-details__role.txt-header Accountant
+            +location().rqst-details__location.txt-caption
+            span.rqst-details__divider.divider.txt-caption |
+            .rqst-details__experience.txt-caption 5 - 10 Years Experience
+            .rqst-details__params
+                .rqst-details__tag.tag 20 Weeks
+                .rqst-details__tag.tag 40 Hours
+        section.rqst-details__employer Accounting firm, 100-500 Employees
+        section.rqst-details__skills
+            h4.rqst-details__skills-title.txt-title-2 Skills
+            .rqst-details__skills-list Taxes, accounting, payroll, QuickBooks, ADP
+            p.rqst-details__desc Accountant needed to help with end of quarter accounting and tax preparation. Ideal candidate has experience with QuickBooks, ADP payroll, and JustWorks.

@@ -1,0 +1,7 @@
+mixin location(location)
+    .location(class=attributes.class)
+        img(src='../src/img/svg/icon_location.svg', width='7.07', height='9')
+        if !location
+            |New York, NY
+        else
+            |#{location}

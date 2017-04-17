@@ -1,10 +1,9 @@
 mixin search()
 	form(action='#', method='get', class=attributes.class).search
 		input(type='text', name='search-text', id='search-text', placeholder='Type a role, skill, or location…').search__input
-		.search__buttons
-			button(type='button', name='search-settings', id='search-settings').search__settings
-				img(src='../src/img/svg/icon_filter.svg')
-				span advanced search
-			button(type='submit', name='search-submit', id='search-submit').search__submit
-				img(src='../src/img/svg/icon_search.svg')
-				span search
+		button(type='button', name='search-settings', id='search-settings').search__settings.btn-primary._white
+			img(src='../src/img/svg/icon_filter.svg', width='12', height='12')
+			span advanced search
+		button(type='submit', name='search-submit', id='search-submit').search__submit.btn-primary
+			img(src='../src/img/svg/icon_search.svg', width='9', height='9')
+			span search

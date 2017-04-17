@@ -1,0 +1,39 @@
+.rqst-details {
+  margin: 0 -20px;
+  background: #fff;
+
+  &__header {
+    padding: 7px 20px 8px;
+    border-bottom: 1px solid rgba(28,28,28,.2);
+    font-size: 0;
+  }
+
+  &__role {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 20px;
+  }
+
+  &__location,
+  &__divider,
+  &__experience {
+    display: inline-block;
+    vertical-align: baseline;
+    line-height: 14 / 11 * 1em;
+    color: $mine-shaft;
+  }
+
+  &__params {
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__tag {
+
+    & + .rqst-details__tag {
+      margin-left: 10px;
+    }
+  }
+}

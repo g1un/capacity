@@ -15,6 +15,26 @@
 	&:disabled {
 		background: rgba(40,40,40,.3);
 	}
+
+	svg {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 7px;
+		overflow: visible;
+	}
+
+	&._white {
+		opacity: .7;
+		background: transparent;
+		color: $mine-shaft-light;
+
+		svg {
+
+			path {
+				fill: $mine-shaft-light;
+			}
+		}
+	}
 }
 
 .btn-flat {
