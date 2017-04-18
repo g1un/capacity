@@ -21,8 +21,7 @@
 		vertical-align: middle;
 		padding-left: 17px;
 		cursor: pointer;
-		@include font-ssp-reg;
-		font-size: 14px;
+		@extend .txt-body;
 		line-height: 1em;
 		color: rgba(40,40,40,.8);
 		position: relative;

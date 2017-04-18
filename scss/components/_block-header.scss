@@ -20,6 +20,7 @@
   }
 
   &__name {
+    @extend .txt-title-1;
     line-height: 26 / 18 * 1em;
   }
 }

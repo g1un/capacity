@@ -5,9 +5,9 @@
     padding-bottom: 11px;
   }
 
-  &._title-2 {
-    padding: 0;
-  }
+  //&._title-2 {
+  //  padding: 0;
+  //}
 
   &__label {
     display: block;
@@ -18,24 +18,21 @@
     span {
       display: inline-block;
       vertical-align: top;
-      @include font-bg-med();
-      font-size: 10px;
-      line-height: 1em;
-      color: rgba(40,40,40,.5);
+      @extend .txt-label;
       text-transform: uppercase;
     }
 
-    &._title-2 {
-
-      .record__label {
-        height: auto;
-        margin-bottom: 2px;
-
-        span {
-          @extend .txt-title-2;
-        }
-      }
-    }
+    //&._title-2 {
+    //
+    //  .record__label {
+    //    height: auto;
+    //    margin-bottom: 2px;
+    //
+    //    span {
+    //      @extend .txt-title-2;
+    //    }
+    //  }
+    //}
   }
 
   &__field {
@@ -49,17 +46,16 @@
     box-shadow: none;
     outline: none;
     background: transparent;
-    @include font-ssp-reg();
-    font-size: 14px;
+    @extend .txt-body;
     line-height: 24 / 14 * 1em;
     color: $mine-shaft;
 
-    &._title-2 {
-
-      .record__field {
-        line-height: 18 / 14 * 1em;
-      }
-    }
+    //&._title-2 {
+    //
+    //  .record__field {
+    //    line-height: 18 / 14 * 1em;
+    //  }
+    //}
   }
 
   &._textarea {

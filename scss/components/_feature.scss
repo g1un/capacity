@@ -9,16 +9,13 @@
 	&__title {
 		@include font-bg-med();
 		font-size: 22px;
-		line-height: 1.27;
+		line-height: 28 / 22 *1em;
 		color: $mine-shaft-light;
 		text-align: center;
 	}
 
 	&__image {
 		height: 170px;
-		//display: flex;
-		//justify-content: center;
-		//align-items: center;
 		position: relative;
 
 		&:before {
@@ -54,7 +51,7 @@
 	&__text {
 		@include font-ssp-reg();
 		font-size: 16px;
-		line-height: 1.44;
+		line-height: 23 / 16 * 1em;
 		color: $mine-shaft-light;
 		text-align: center;
 	}

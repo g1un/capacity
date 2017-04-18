@@ -1,4 +1,4 @@
 mixin switch(title, id)
     .switch
         input(type='checkbox', name='#{id}', id='#{id}')
-        label(for='#{id}').txt-body!= title
+        label(for='#{id}')!= title

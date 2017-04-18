@@ -15,6 +15,7 @@ html
         include includes/checkbox
         include includes/collapse
         include includes/buttons
+        include includes/location
 
         +layout()
             +link-back('all employees')
@@ -25,7 +26,7 @@ html
                             .block-header__photo
                                 img(src='img/kyle-p.jpg')
                             .block-header__info
-                                .block-header__name.txt-title-1 Kyle Perez
+                                .block-header__name Kyle Perez
                                 button.block-header__button.btn-flat Remove Image
                         .block__container.js-form
                             .block__edit
@@ -81,17 +82,15 @@ html
                         .block
                             .block__container.request
                                 .request__company
-                                    .request__company-title.txt-title-1!= val.company
-                                    .request__location
-                                        img(src='../src/img/svg/icon_location.svg')
-                                        span.txt-caption New York, NY
+                                    .request__company-title!= val.company
+                                    +location().request__location
                                 .request__time
-                                    .request__period.txt-body!= val.period
+                                    .request__period!= val.period
                                     span |
-                                    .request__hours.txt-body #{val.hours} hours per week
-                                .request__payout.txt-body Capacity Payout: $#{val.payout}
+                                    .request__hours #{val.hours} hours per week
+                                .request__payout Capacity Payout: $#{val.payout}
                                 +collapse('job description')(class='#{i == 1 ? "_opened" : ""} request__desc')
-                                    p.request__desc-text.txt-body Watkins is seeking a detail-oriented accountant with accounts-payable experience to assist during our busy season.
+                                    p.request__desc-text Watkins is seeking a detail-oriented accountant with accounts-payable experience to assist during our busy season.
                                 +buttons('decline-request', 'Decline Request', 'accept-request', 'Accept Request')
                     .heading.txt-title-2 Placement History (2)
                     -
@@ -110,6 +109,6 @@ html
                     each val, i in requests
                         .block
                             .block__container.request
-                                .placement__company.txt-title-1!= val.company
-                                .placement__period.txt-body!= val.period
-                                .placement__payout.txt-body Capacity Payout: $#{val.payout}
+                                .placement__company!= val.company
+                                .placement__period!= val.period
+                                .placement__payout Capacity Payout: $#{val.payout}

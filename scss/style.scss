@@ -2,12 +2,12 @@
 @import "plugins/normalize";
 @import "plugins/bootstrap/variables";
 @import "plugins/bootstrap/bootstrap";
-//@import "plugins/slick";
 
 //base
 @import 'components/variables';
 @import 'components/mixins';
 @import 'components/fonts';
+@import 'components/typography';
 @import 'components/general';
 @import 'components/block';
 @import 'components/block-header';
@@ -18,7 +18,6 @@
 @import 'components/btn';
 @import 'components/tag';
 @import 'components/video';
-@import 'components/typography';
 @import 'components/heading';
 @import 'components/match';
 @import 'components/form-control';

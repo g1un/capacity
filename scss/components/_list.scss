@@ -18,11 +18,9 @@
 				width: 100%;
 				padding: 0 8px;
 				margin-bottom: 10px;
-				@include font-bg-bold();
-				font-size: 12px;
+				@extend .txt-title-2;
 				line-height: 1em;
 				color: $mine-shaft;
-				text-transform: uppercase;
 			}
 
 			&__caption {

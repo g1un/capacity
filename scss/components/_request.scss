@@ -9,27 +9,27 @@
     display: inline-block;
     vertical-align: baseline;
     margin-right: 15px;
+    @extend .txt-title-1;
     line-height: 26 / 18 * 1em;
   }
 
   &__location {
     display: inline-block;
     vertical-align: baseline;
+    @extend .txt-caption;
+    line-height: 14 / 11 *1em;
+    color: $mine-shaft;
 
     svg {
       margin-right: 3px;
       overflow: visible;
-    }
-
-    span {
-      color: $mine-shaft;
-      line-height: 14 / 11 *1em;
     }
   }
 
   &__period,
   &__hours,
   &__payout {
+    @extend .txt-body;
     line-height: 20 / 14 * 1em;
     color: $mine-shaft;
   }
@@ -53,6 +53,7 @@
   }
 
   &__desc-text {
+    @extend .txt-body;
     line-height: 18 / 14 * 1em;
   }
 }

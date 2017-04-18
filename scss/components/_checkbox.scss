@@ -1,7 +1,6 @@
 .checkbox {
 	display: inline-block;
 	vertical-align: top;
-	//padding-bottom: 7px;
 	line-height: 0;
 
 	input {
@@ -26,8 +25,7 @@
 		vertical-align: middle;
 		padding-left: 17px;
 		cursor: pointer;
-		@include font-ssp-reg;
-		font-size: 14px;
+		@extend .txt-body;
 		line-height: 24 / 14 * 1em;
 		color: rgba(40,40,40,.8);
 		position: relative;

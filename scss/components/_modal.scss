@@ -37,10 +37,12 @@
 	}
 
 	&__name {
+		@extend .txt-title-1;
 		line-height: 26 / 18 * 1em;
 	}
 
 	&__role {
+		@extend .txt-subtitle;
 		line-height: 20 / 18 * 1em;
 	}
 
@@ -85,8 +87,7 @@
 		}
 
 		p {
-			@include font-ssp-reg();
-			font-size: 14px;
+			@extend .txt-body;
 			line-height: 18 / 14 * 1em;
 			color: $mine-shaft;
 		}
@@ -113,8 +114,7 @@
 
 		h4 {
 			margin-bottom: 13px;
-			@include font-bg-med();
-			font-size: 10px;
+			@extend .txt-label;
 			line-height: 1em;
 			color: rgba(40,40,40,.8);
 			text-transform: uppercase;

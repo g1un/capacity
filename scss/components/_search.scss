@@ -15,8 +15,7 @@
 		border: none;
 		outline: none;
 		@include placeholder($mine-shaft-light, .5);
-		font-size: 14px;
-		line-height: 1.2em;
+		@extend .txt-body;
 	}
 
 	&__settings,

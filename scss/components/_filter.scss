@@ -41,10 +41,6 @@
 		}
 
 		button {
-			padding: 0;
-			background: none;
-			border: none;
-			outline: none;
 			line-height: 0;
 		}
 
@@ -78,14 +74,9 @@
 		margin-left: 48px;
 		display: inline-block;
 		vertical-align: middle;
-		@include font-bg-bold();
-		font-size: 12px;
+		@extend .txt-title-2;
 		line-height: 2em;
 		color: $mine-shaft;
-
-		span {
-			text-transform: uppercase;
-		}
 	}
 
 	&__list {
@@ -94,6 +85,8 @@
 		padding-right: 16px;
 		cursor: pointer;
 		position: relative;
+		@include font-bg-reg();
+		text-transform: none;
 
 		&:after {
 			content: '';

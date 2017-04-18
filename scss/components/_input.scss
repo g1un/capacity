@@ -50,8 +50,7 @@
     transform-origin: 0 0;
     transform: translateY(22px) scale(1);
     transition: all .25s;
-    @include font-bg-med();
-    font-size: 12px;
+    @extend .txt-hint;
     line-height: 1em;
     color: rgba(40,40,40,.8);
     text-transform: uppercase;
@@ -71,8 +70,7 @@
     outline: none;
     background: transparent;
     transition: all .25s;
-    @include font-ssp-reg();
-    font-size: 14px;
+    @extend .txt-body;
     line-height: 24 / 14 * 1em;
     color: $mine-shaft;
 

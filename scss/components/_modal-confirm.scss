@@ -17,6 +17,7 @@
 
   &__text {
     margin-bottom: 14px;
+    @extend .txt-body;
     line-height: 19 / 14 * 1em;
   }
 

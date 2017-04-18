@@ -3,13 +3,9 @@
 	padding: 8px 12px;
 	background: $astral;
 	border-radius: 2px;
-	border: none;
-	outline: none;
-	@include font-bg-bold();
-	font-size: 12px;
+	@extend .txt-button;
 	line-height: 1em;
 	color: #fff;
-	text-transform: uppercase;
 	text-align: center;
 
 	&:disabled {
@@ -39,10 +35,6 @@
 
 .btn-flat {
 	display: inline-block;
-	padding: 0;
-	border: none;
-	outline: none;
-	background: none;
 	@extend .txt-flat-button;
 
 	&:disabled {

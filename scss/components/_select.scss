@@ -10,8 +10,7 @@
     span {
       display: block;
       padding-bottom: 2px;
-      @include font-bg-med();
-      font-size: 12px;
+      @extend .txt-hint;
       line-height: 2em;
       color: rgba(40,40,40,.8);
       text-transform: uppercase;

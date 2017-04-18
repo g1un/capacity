@@ -25,7 +25,7 @@
 		transform: translateX(-50%);
 		@include font-ssp-sb();
 		font-size: 18px;
-		line-height: 1.78;
+		line-height: 32 / 18 * 1em;
 		color: #fff;
 		text-transform: uppercase;
 

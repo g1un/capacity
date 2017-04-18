@@ -2,11 +2,13 @@
 
   &__company {
     margin-bottom: 10px;
+    @extend .txt-title-1;
     line-height: 26 / 18 * 1em;
   }
 
   &__period,
   &__payout {
+    @extend .txt-body;
     line-height: 20 / 14 * 1em;
     color: $mine-shaft;
   }
