@@ -1,10 +1,15 @@
 .rqst-details {
-  margin: 0 -20px;
+  margin: 0 -20px 20px;
   background: #fff;
 
   &__header {
     padding: 7px 20px 8px;
     border-bottom: 1px solid rgba(28,28,28,.2);
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
     font-size: 0;
   }
 
@@ -19,15 +24,16 @@
   &__experience {
     display: inline-block;
     vertical-align: baseline;
+    @extend .txt-caption;
     line-height: 14 / 11 * 1em;
     color: $mine-shaft;
   }
 
   &__params {
-    float: right;
     height: 100%;
-    display: flex;
     align-items: center;
+    flex-grow: 1;
+    text-align: right;
   }
 
   &__tag {
@@ -35,5 +41,31 @@
     & + .rqst-details__tag {
       margin-left: 10px;
     }
+  }
+
+  &__employer{
+    padding: 8px 20px;
+    border-bottom: 1px solid rgba(28,28,28,.2);
+    @extend .txt-title-1;
+    line-height: 26 / 18 * 1em;
+  }
+
+  &__skills {
+    padding: 9px 20px 10px;
+  }
+
+  &__skills-title {
+    margin-bottom: 1px;
+  }
+
+  &__skills-list {
+    margin-bottom: 10px;
+  }
+
+  &__skills-list,
+  &__desc {
+    @extend .txt-body;
+    line-height: 18 / 14 * 1em;
+    color: $mine-shaft;
   }
 }

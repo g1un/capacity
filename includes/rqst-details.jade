@@ -2,11 +2,12 @@ include location
 
 mixin rqst-details()
     .rqst-details
-        header.rqst-details__header.clearfix
-            h3.rqst-details__role.txt-header Accountant
-            +location().rqst-details__location.txt-caption
-            span.rqst-details__divider.divider.txt-caption |
-            .rqst-details__experience.txt-caption 5 - 10 Years Experience
+        header.rqst-details__header
+            .rqst-details__info
+                h3.rqst-details__role.txt-header Accountant
+                +location().rqst-details__location
+                span.rqst-details__divider.divider |
+                .rqst-details__experience 5 - 10 Years Experience
             .rqst-details__params
                 .rqst-details__tag.tag 20 Weeks
                 .rqst-details__tag.tag 40 Hours
